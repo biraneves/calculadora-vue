@@ -28,4 +28,10 @@ const props = defineProps(['resultado']);
     text-align: right;
     width: 98%;
 }
+
+@media screen and (min-width: 768px) {
+    .calculator {
+        font-size: 64px;
+    }
+}
 </style>
