@@ -36,9 +36,6 @@ const props = defineProps(['setValor1', 'setOperacao', 'setValor2', 'setResultad
             <div class="col-3 mt-3">
                 <button @click="resetFields" class="btn btn-danger w-100 fs-2" type="reset">C</button>
             </div>
-            <div class="col-3 mt-3">
-                <button class="btn btn-dark w-100 fs-2" type="submit">=</button>
-            </div>
         </div>
     </form>
 </template>
