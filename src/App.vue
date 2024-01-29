@@ -10,6 +10,21 @@ const estado = reactive({
     operacao: 'soma',
 });
 
+const changeValor1 = e => {
+    estado.valor1 = e.target.value ? parseInt(e.target.value) : 0;
+    efetuaCalculo();
+};
+
+const changeValor2 = e => {
+    estado.valor2 = e.target.value ? parseInt(e.target.value) : 0;
+    efetuaCalculo();
+};
+
+const changeOperacao = e => {
+    estado.operacao = e.target.value;
+    efetuaCalculo();
+};
+
 const efetuaCalculo = () => {
     switch (estado.operacao) {
         case 'soma':
@@ -44,9 +59,9 @@ const resetFields = () => {
             <Header />
             <Corpo
                 :resultado="estado.resultado"
-                :setValor1="e => (estado.valor1 = parseInt(e.target.value))"
-                :setValor2="e => (estado.valor2 = parseInt(e.target.value))"
-                :setOperacao="e => (estado.operacao = e.target.value)"
+                :setValor1="changeValor1"
+                :setValor2="changeValor2"
+                :setOperacao="changeOperacao"
                 :setResultado="efetuaCalculo"
                 :resetFields="resetFields"
             />

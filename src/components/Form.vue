@@ -7,7 +7,7 @@ const props = defineProps(['setValor1', 'setOperacao', 'setValor2', 'setResultad
         <div class="row g-1">
             <div class="col-4">
                 <input
-                    @change="setValor1"
+                    @keyup="setValor1"
                     class="form-control w-100 fs-2 text-center"
                     type="number"
                     placeholder="Valor"
@@ -23,7 +23,7 @@ const props = defineProps(['setValor1', 'setOperacao', 'setValor2', 'setResultad
             </div>
             <div class="col-4">
                 <input
-                    @change="setValor2"
+                    @keyup="setValor2"
                     class="form-control w-100 fs-2 text-center text-center"
                     type="number"
                     placeholder="Valor"
